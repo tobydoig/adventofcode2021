@@ -1,5 +1,5 @@
 'use strict';
-//  https://adventofcode.com/2021/day/5
+//  https://adventofcode.com/2021/day/6
 
 const fs = require('fs');
 const inputs = fs.readFileSync('./input.txt', {encoding: 'utf8' }).split(',').filter(Boolean).map(x => +x);
