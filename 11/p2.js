@@ -23,7 +23,8 @@ function flash(arr, x, y) {
 console.log(inputs.map(r => r.join()).join('\n'));
 
 let totalFlashes = 0;
-for (let step = 1; step <= 100; step++) {
+const totalCells = inputs.length * inputs[0].length;
+for (let step = 1; step <= 1000; step++) {
   console.log(`step ${step}`);
   for (let y = 0; y < inputs.length; y++) {
     let r = inputs[y];
@@ -46,6 +47,8 @@ for (let step = 1; step <= 100; step++) {
   }
 
   totalFlashes += flashes;
+
+  if (flashes === totalCells) break;
 }
 console.log(inputs.map(r => r.join()).join('\n'));
 console.log(`${totalFlashes} flashes`);
